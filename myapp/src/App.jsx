@@ -1,5 +1,8 @@
 import './App.css';
+import Courses from "./Component/Courses";
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import navItems from "./data/navItems";
+
 
 function App() {
 
@@ -10,14 +13,14 @@ function App() {
     <div style={{backgroundColor:'#ffffffff', color:"black",display:'flex',alignItems:"center",color:"#000",textDecoration:"none",padding: '0 20px',  margin: 0}}>
       <img src="Allen.png" alt="Allen Logo" style={{height:"100px",display:"block",marginRight:"20px"}} />
      
-      <Link to="/Allen/Courses"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>Courses</Link>
-      <Link to="/Allen/TestSeries"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>Test Series</Link>
-      <Link to="/Allen/Classroom"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>Classroom</Link>
-      <Link to="/Allen/Result"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>Result</Link>
-      <Link to="/Allen/StudyMaterial"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>Study Material</Link>
-      <Link to="/Allen/Scholarships"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>Scholarships</Link>
-      <Link to="/Allen/Allenstore"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>ALLENESTORE</Link>
-      <Link to="/Allen/More"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' }}>More</Link>
+      <Link to="/Allen/Courses"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none', fontfamily: "Tagesschrift" }}>Courses</Link>
+      <Link to="/Allen/TestSeries"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none',fontfamily: "Tagesschrift"}}>Test Series</Link>
+      <Link to="/Allen/Classroom"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none',fontfamily: "Tagesschrift" }}>Classroom</Link>
+      <Link to="/Allen/Result"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none', fontfamily: "Tagesschrift" }}>Result</Link>
+      <Link to="/Allen/StudyMaterial"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none' ,fontfamily: "Tagesschrift"}}>Study Material</Link>
+      <Link to="/Allen/Scholarships"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none', fontfamily: "Tagesschrift"}}>Scholarships</Link>
+      <Link to="/Allen/Allenstore"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none', fontfamily: "Tagesschrift" }}>ALLENESTORE</Link>
+      <Link to="/Allen/More"  style={{ color: '#000', marginRight: '20px', fontWeight: 500, textDecoration: 'none', fontfamily: "Tagesschrift"}}>More</Link>
 
     </div>
 
@@ -33,13 +36,6 @@ function App() {
      
     </Routes>
     </BrowserRouter>
-  </div>
-
-}
-
-function Courses(){
-  return <div>
-    Hello Course
   </div>
 
 }
