@@ -1,12 +1,7 @@
+import {Link} from "react-router-dom"
+import navItems from "../data/navItems"
 
-import Navbar from "./components/Navbar";
 
-function App(){
-    
-    return <div>
-        <Navbar/>
-    </div>
-}
 
 
 function Navbar(){
@@ -21,4 +16,4 @@ function Navbar(){
     );
 }
 
-export default App;
+export default Navbar;
