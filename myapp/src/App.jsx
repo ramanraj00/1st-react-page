@@ -1,33 +1,31 @@
-import {BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Courses from "./components/Courses";
-import TestSeries from "./components/TestSeries";
-import Classroom from "./components/Classroom";
-import Result from "./components/Result";
-import StudyMaterial from "./components/StudyMaterial";
-import Scholarships from "./components/Scholarships";
-import More from "./components/More";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Courses from "./components/courses.jsx";
+import TestSeries from "./components/TestSeries.jsx";
+import Classroom from "./components/Classroom.jsx";
+import Result from "./components/Result.jsx";
+import StudyMaterial from "./components/StudyMaterial.jsx";
+import Scholarships from "./components/Scholarships.jsx";
+import More from "./components/More.jsx";
 
 function App() {
-
   return (
-
     <BrowserRouter>
+      <Navbar />
+      <Routes>
+        {/* Default homepage route */}
+        <Route path="/" element={<Courses />} />
 
-    <Navbar/>
-
-    <Routes>
-     <Route path="/Allen/Courses" element={<Courses/>}></Route>
-     <Route path="/Allen/TestSeries" element={<TestSeries/>}></Route>
-    <Route path="/Allen/ClassRoom" element={<Classroom/>}></Route>
-    <Route path="/Allen/Result" element={<Result/>}></Route>
-    <Route path="/Allen/StudyMaterial" element={<StudyMaterial/>}></Route>
-    <Route path="/Allen/Scholarships" element={<Scholarships/>}></Route>
-    {/* <Route path="/Allen/Allenstore" element={<ALLENESTORE/>}></Route> */}
-    <Route path="/Allen/More" element={<More/>}></Route>
-     
-    </Routes>
+        <Route path="/Allen/Courses" element={<Courses />} />
+        <Route path="/Allen/TestSeries" element={<TestSeries />} />
+        <Route path="/Allen/ClassRoom" element={<Classroom />} />
+        <Route path="/Allen/Result" element={<Result />} />
+        <Route path="/Allen/StudyMaterial" element={<StudyMaterial />} />
+        <Route path="/Allen/Scholarships" element={<Scholarships />} />
+        <Route path="/Allen/More" element={<More />} />
+      </Routes>
     </BrowserRouter>
   );
 }
-export default App
+
+export default App;
