@@ -16,6 +16,7 @@ export const navItems = [
   { name: "Result", path: "/Allen/Result" },
   { name: "Study Material", path: "/Allen/StudyMaterial" },
   { name: "Scholarships", path: "/Allen/Scholarships" },
+    { name: "Allen E-Store", path: "/Allen/AllenEstore" },
   { name: "More", path: "/Allen/More" }
 ];
 
