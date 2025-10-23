@@ -10,7 +10,7 @@ import "swiper/css";
  function ChampionsCardSlider(){
     return (
         
-        <div className="bg-gray-100 h-[500px] flex items-center justify-center">
+        <div className="bg-[#EAEFF7] h-[500px] flex items-center justify-center">
              <div className="w-full max-w-[1100px]">
             <Swiper 
            // onSwiper={(s) => (window.__sw = s)} to check everthing is true check in console
@@ -34,9 +34,6 @@ freeModeMomentumRatio={0.8}
 freeModeMomentumVelocityRatio={0.9}
 speed={600}
 autoHeight={true}
-
-
-
 
          >
 
