@@ -1,10 +1,23 @@
 @import "tailwindcss";
 
 .bg-grid {
-  background-image: 
-    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px),
-    linear-gradient(to right, #2563eb, #1e40af); /* Tailwind's blue-600 → blue-900 */
-  background-size: 40px 40px, 40px 40px, 100% 100%;
+background-color: #029e74;
+background-image:
+  /* grid pattern on sides */
+  linear-gradient(to right,
+    rgba(255,255,255,0.12) 1px, transparent 1px),
+  linear-gradient(to bottom,
+    rgba(255,255,255,0.12) 1px, transparent 1px),
+  /* smooth blend: transparent center, solid color edges */
+  linear-gradient(to right,
+    #029e74 25%, 
+    transparent 45%, 
+    transparent 55%, 
+    #029e74 75%);
+background-size: 32px 32px, 32px 32px, 100% 100%;
+background-position: center;
+
+
+
 }
 

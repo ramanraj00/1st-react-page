@@ -29,6 +29,7 @@ import NeetCoursesCard from "./pages/NeetCoursesCard.jsx";
 function App() {
   return (
     <BrowserRouter>
+    
       <Routes>
         {/* Default homepage route */}
         <Route path="/" element={<Layout />} >
