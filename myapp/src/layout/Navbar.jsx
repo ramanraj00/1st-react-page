@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { logo, navItems } from "../Data/navItems.js";
 import { buttons } from "../Data/Navbarbuttons.js";
-import { BusFrontIcon } from "lucide-react";
 
 
 

@@ -20,7 +20,9 @@ import CardPages2 from "./pages/CardPages2.jsx";
 import CardPages3 from "./pages/CardPages3.jsx";
 import CardPages4 from "./pages/CardPages4.jsx";
 import CardPages5 from "./pages/CardPages5.jsx";
-
+import Class6to10CoursesCard from "./pages/Class6to10CoursesCard.jsx";
+import JeeCoursesCard from "./pages/JeeCoursesCard.jsx";
+import NeetCoursesCard from "./pages/NeetCoursesCard.jsx";
 
 
 
@@ -43,6 +45,12 @@ function App() {
         <Route path="/Allen/CardPages3" element={<CardPages3/>}/>
         <Route path="/Allen/CardPages4" element={<CardPages4/>}/>
         <Route path="/Allen/CardPages5" element={<CardPages5/>}/>
+        <Route path="/Allen/Class6to10CoursesCard" element={<Class6to10CoursesCard/>}/>
+        <Route path="/Allen/JeeCoursesCard" element={<JeeCoursesCard/>}/>
+        <Route path="/Allen/NeetCoursesCard" element={<NeetCoursesCard/>}/>
+
+
+
         </Route>
       </Routes>
     </BrowserRouter>

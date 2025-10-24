@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import NoticeBar from "./NoticeBar";
 import ChampionsCardSlider from "./ChampionsCardlayout.jsx";
 import PickHeader from "./PickHeader.jsx";
-
+import CoursesCard from "./CourseCard.jsx";
 
 
 export default function Layout() {
@@ -17,6 +17,8 @@ export default function Layout() {
          {pathname === "/" && <ChampionsCardSlider />}  
 
         {pathname === "/"  && <PickHeader/>}
+
+        {pathname === "/" && <CoursesCard/>}
         
         <Outlet />
       </main>
