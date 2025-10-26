@@ -1,4 +1,5 @@
 import { useState } from "react"
+import TrendigCoursesData from "../Data/TrendingCourses.js";
 
 function TrendingCourses(){
 
@@ -11,6 +12,13 @@ function TrendingCourses(){
 
   const baseBtn =
     "px-6 py-2 rounded-xl border transition-all duration-200 font-sans font-semibold text-sm focus:outline-none ";
+
+const selectedCourse = TrendigCoursesData.find((course) => course.id === activeTab);
+let cardsArray = [];
+if (selectedCourse) {
+  const arrEntry = Object.entries(selectedCourse).find(([k,v]) => Array.isArray(v));
+  cardsArray = arrEntry ? arrEntry[1] : [];
+}
 
 
     return (
@@ -44,7 +52,69 @@ function TrendingCourses(){
             );
 
         })}
+
        </div>
+  
+         
+<div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-20 lg:px-32 mt-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {cardsArray.map((card, idx) => {
+ 
+      const featureList = Array.isArray(card.feature)
+        ? card.feature
+        : Array.isArray(card.features)
+        ? card.features
+        : [];
+
+     
+      const key = card.id ? `${activeTab}-${card.id}` : `${activeTab}-${card.title ?? idx}`;
+
+      return (
+        <div
+          key={key}
+          className="relative h-full flex flex-col justify-between p-6 bg-white rounded-2xl border shadow-sm"
+        >
+     
+          <div className="flex items-start justify-between mb-3">
+            {card.tag && (
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white text-xs rounded-full">
+                {card.tag}
+              </span>
+            )}
+            {card.badge && (
+              <span className="text-xs font-semibold text-white bg-orange-500 px-3 py-1 rounded-full">
+                {card.badge}
+              </span>
+            )}
+          </div>
+
+       
+          <div>
+            {card.title && <h2 className="text-lg font-bold text-gray-900 mb-2">{card.title}</h2>}
+            {card.desc && <p className="text-sm text-gray-600 mb-4">{card.desc}</p>}
+          </div>
+
+   
+          {featureList.length > 0 && (
+            <ul className="text-sm text-gray-700 mb-4 list-disc list-inside space-y-2">
+              {featureList.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          )}
+
+
+          <div className="flex items-center justify-between mt-4">
+            <div className="text-xl font-bold text-gray-900">{card.price}</div>
+            <button className="text-blue-600 font-medium">{card.label}</button>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+
 
     </div>
 

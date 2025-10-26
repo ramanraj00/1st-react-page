@@ -2,6 +2,7 @@
 
 export const TrendingNeet = [
     {
+    id:"jee-1",
     tag: "LIVE",
     badge: "Batch Starts 2nd Sep",
     title:"Achiever Online Course",
@@ -16,11 +17,12 @@ export const TrendingNeet = [
 },
 
  {     
+        id : "jee2",
         tag: "New Launch RECORDED + TEST SERIES",
         badge: "New Launch",
         title: "Achiever Self-Study Plus Course",
         desc: "Video lectures + Test Series",
-        features: [
+        feature: [
           "1250+ high-quality recorded lectures covering full syllabus",
           "Digital study material incl. books, RACEs & more",
           "22 (part + full) syllabus tests",
@@ -32,6 +34,7 @@ export const TrendingNeet = [
 
 export const TrendingJee = [
     {
+        id : "neet-1",
         tag:"Live",
         badge: "Upto 90% SCHOLARSHIP",
         title:"JEE Leader Online Course",
@@ -46,6 +49,7 @@ export const TrendingJee = [
     },
 
     {
+        id : "nee-2",
        tag:"RECORDED + TESTSERIES",
         badge:"20% Festive Discount",
         title:"Jee Achiever Self-Study Plan Course",
@@ -62,6 +66,7 @@ export const TrendingJee = [
 
 export const sixtoten = [
     {
+        id : "6to10one",
         tag:"Recoded",
         title:"Olympiad Rank Booster + Study Material Course",
         feature:[
@@ -74,7 +79,8 @@ export const sixtoten = [
         label:"Know more >"
     },
 
-    {
+    {     
+        id : "6to10two",
          tag:"Recoded",
            title:"School Marks Booster + Study Material Course",
            
@@ -89,8 +95,10 @@ export const sixtoten = [
     },
 ];
 
-export const TrendigCoursesData = {
-    Neet : TrendingNeet,
-    Jee  : TrendingJee ,
-    sixtoten : sixtoten
-};
+  const TrendigCoursesData = [
+   { Neet : TrendingNeet , id : "Neet"},
+   { Jee  : TrendingJee , id: "Jee" },
+   { sixtoten : sixtoten , id:"Class6-10"}
+]
+
+export default TrendigCoursesData;
