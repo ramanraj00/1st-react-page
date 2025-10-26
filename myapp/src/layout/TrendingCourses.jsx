@@ -70,9 +70,13 @@ if (selectedCourse) {
       const key = card.id ? `${activeTab}-${card.id}` : `${activeTab}-${card.title ?? idx}`;
 
       return (
-        <div
+
+       <div>
+
+        {/*card*/}
+         <div
           key={key}
-          className="relative h-full flex flex-col justify-between p-6 bg-white rounded-2xl border shadow-sm"
+          className="relative h-full flex flex-col justify-between p-6 bg-white rounded-2xl border shadow-sm "
         >
      
           <div className="flex items-start justify-between mb-3">
@@ -109,12 +113,22 @@ if (selectedCourse) {
             <button className="text-blue-600 font-medium">{card.label}</button>
           </div>
         </div>
+     
+       </div>
+
       );
     })}
+
+    
+ 
   </div>
 </div>
 
-
+ <div className="text-center mt-8 flex justify-center items-center ">
+    <button className="border rounded-4xl px-6 py-2 bg-blue-600 text-gray-200 font-semibold text-sm hover:bg-blue-700 transition w-56 h-13">
+      View All {activeTab} Courses
+    </button>
+  </div>
 
     </div>
 
