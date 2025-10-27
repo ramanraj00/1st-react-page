@@ -12,6 +12,7 @@ import "swiper/css";
         
         <div className="bg-[#EAEFF7] h-[500px] flex items-center justify-center">
              <div className="w-full max-w-[1100px]">
+              
             <Swiper 
            // onSwiper={(s) => (window.__sw = s)} to check everthing is true check in console
          modules={[Pagination,Mousewheel ]}

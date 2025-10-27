@@ -125,7 +125,7 @@ if (selectedCourse) {
 </div>
 
  <div className="text-center mt-8 flex justify-center items-center ">
-    <button className="border rounded-4xl px-6 py-2 bg-blue-600 text-gray-200 font-semibold text-sm hover:bg-blue-700 transition w-56 h-13">
+    <button className="border rounded-4xl px-6 py-2 bg-blue-600 text-gray-200 font-semibold text-sm hover:bg-blue-700 transition w-48 h-13 mb-6">
       View All {activeTab} Courses
     </button>
   </div>
