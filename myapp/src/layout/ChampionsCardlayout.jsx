@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ChampionsCard } from "../Data/ChampionsData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination,Mousewheel } from "swiper/modules";
+import { Pagination,Mousewheel , Autoplay} from "swiper/modules";
  import "swiper/css/pagination";
  import "swiper/css/mousewheel";
 import "swiper/css";
@@ -11,11 +11,11 @@ import "swiper/css";
     return (
         
         <div className="bg-[#EAEFF7] h-[500px] flex items-center justify-center">
-             <div className="w-full max-w-[1100px]">
-              
+             <div className="w-full max-w-[1200px]">
+
             <Swiper 
            // onSwiper={(s) => (window.__sw = s)} to check everthing is true check in console
-         modules={[Pagination,Mousewheel ]}
+         modules={[Pagination,Mousewheel,Autoplay ]}
          slidesPerView={1.1}
          spaceBetween={10}
          centeredSlides={true}
@@ -27,6 +27,11 @@ import "swiper/css";
          mousewheel={{ forceToAxis: true, sensitivity: 0.8 }}
          pagination={{ clickable: true }}
          
+                          autoplay ={{
+                          delay: 2500,         
+                          disableOnInteraction: false, 
+                          pauseOnMouseEnter: true,
+                          }}
        
          // smoothness
          
@@ -42,7 +47,7 @@ autoHeight={true}
             <SwiperSlide key={card.id} className="flex items-center justify-center p-8">
               <div className="flex justify-center items-center">
                 <Link to ={card.path}>
-               <img src={card.src} alt={card.alt} className="w-250 h-84"/>
+               <img src={card.src} alt={card.alt} className=" h-80"/>
                 </Link>
                  </div>
 

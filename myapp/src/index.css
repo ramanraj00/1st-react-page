@@ -24,3 +24,20 @@ background-position: center;
 
 }
 
+
+/* 🔵 Make pagination bullets larger and modern */
+.swiper-pagination-bullet {
+  width: 10px !important;    /* default is 8px */
+  height: 10px !important;
+  background: #000000 !important; /* soft Allen-blue tone */
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  margin: 0 6px !important; /* adds spacing between dots */
+}
+
+/* 🔵 Active bullet style */
+.swiper-pagination-bullet-active {
+  background: #010101 !important; /* brighter blue */
+  opacity: 1;
+  transform: scale(1); /* makes active dot pop */
+}

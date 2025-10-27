@@ -6,6 +6,7 @@ import PickHeader from "./PickHeader.jsx";
 import CoursesCard from "./CourseCard.jsx";
 import TrendingCourses from "./TrendingCourses.jsx";
 import Slider from "./Slider.jsx";
+import SliderCardTwo from "./SliderCardtwo.jsx";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -24,6 +25,8 @@ export default function Layout() {
         {pathname === "/" && <TrendingCourses/>}
 
         {pathname === "/" && <Slider/>}
+
+        {pathname === "/" && <SliderCardTwo/>}
         
         <Outlet />
       </main>
