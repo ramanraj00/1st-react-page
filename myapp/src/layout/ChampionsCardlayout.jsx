@@ -16,7 +16,7 @@ import "swiper/css";
             <Swiper 
            // onSwiper={(s) => (window.__sw = s)} to check everthing is true check in console
          modules={[Pagination,Mousewheel,Autoplay ]}
-         slidesPerView={1.1}
+         slidesPerView={1}
          spaceBetween={10}
          centeredSlides={true}
          grabCursor={true}
