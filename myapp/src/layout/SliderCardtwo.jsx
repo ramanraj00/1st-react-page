@@ -9,7 +9,7 @@ function SliderCardTwo(){
 
     return(
 
-        <div className="pt-6 ">
+        <div className="pt-6 pb-5 ">
 
           
 

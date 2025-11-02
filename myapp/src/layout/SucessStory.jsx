@@ -10,7 +10,7 @@ function SuccessStory () {
     
     return (
 
-     <div className="flex items-center ">
+     <div className="flex items-center pt-5 ">
 
         <div className="mr-3">
 
