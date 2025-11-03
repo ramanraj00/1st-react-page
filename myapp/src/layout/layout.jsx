@@ -10,6 +10,7 @@ import SliderCardTwo from "./SliderCardtwo.jsx";
 import SuccessStory from "./SucessStory.jsx";
 import Advantage  from "./AdvantageComponent.jsx";
 import TestimonialCard from "./Testimonial.jsx";
+import CallBackCard from "./CallBack.jsx"
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -36,6 +37,8 @@ export default function Layout() {
         {pathname === "/" && <Advantage/>}
 
         {pathname === "/" && <TestimonialCard/>}
+
+        {pathname === "/" && <CallBackCard/>}
         
         <Outlet />
       </main>
