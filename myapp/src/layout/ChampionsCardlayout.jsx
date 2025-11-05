@@ -10,7 +10,7 @@ import "swiper/css";
  function ChampionsCardSlider(){
     return (
         
-        <div className="bg-[#EAEFF7] h-[500px] flex items-center justify-center">
+        <div className="bg-[#EAEFF7] h-[500px] grid items-center justify-center">
              <div className="w-full max-w-[1200px]">
 
             <Swiper 
