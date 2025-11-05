@@ -35,11 +35,13 @@ import CallBackCardData from "../Data/CallBackData";
                 <img className="h-85" src="https://asset.allen.in/dccd40f4-6c9d-4d84-8dc5-287391ec51a2/original.webp?__ar__=0.981595" alt="" />
             </div>
 
-        <form onSubmit={handleSubmit}  className="shadow-xl w-2xl  rounded-2xl p-5">
+        <form onSubmit={handleSubmit}  className="shadow-xl w-2xl  rounded-2xl p-6">
 
         <div className="mb-4">
             <p className="font-semibold text-2xl">Request a callback</p>
         </div>
+
+            <div className="border-[0.5px] border-white mb-3"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8  ">
         {CallBackCardData.map((c)=>(

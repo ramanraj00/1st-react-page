@@ -11,6 +11,8 @@ import SuccessStory from "./SucessStory.jsx";
 import Advantage  from "./AdvantageComponent.jsx";
 import TestimonialCard from "./Testimonial.jsx";
 import CallBackCard from "./CallBack.jsx"
+import LinkCard from "./Link.jsx";
+import { Link2 } from "lucide-react";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -39,6 +41,8 @@ export default function Layout() {
         {pathname === "/" && <TestimonialCard/>}
 
         {pathname === "/" && <CallBackCard/>}
+
+        {pathname === "/" && <LinkCard/>}
         
         <Outlet />
       </main>
