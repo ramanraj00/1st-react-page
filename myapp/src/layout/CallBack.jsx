@@ -1,67 +1,81 @@
 
-const CallBackCard = () => {
+import { useState } from "react";
+import CallBackCardData from "../Data/CallBackData";
+
+    const CallBackCard = () => {
+
+    const [form,setForm] = useState(
+       
+        {
+            FullName:"",
+            Class:"",
+            CoursePref:"",
+            Mobile:"",
+            goal:"",
+            location:""
+        }
+    )
+
+    const handleChanges = (e) => {
+
+            const {name , value } = e.target;
+           setForm(prev => ({...prev, [name]:value}))
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(form)
+    }
 
     return (
 
-        <section className="bg-[#EAEFF7] h-full flex justify-around item-center  ">{/* Outer Section Start*/}
+        <section className="bg-[#EAEFF7]  flex items-center justify-center p-14  mt-8">{/* Outer Section Start*/}
 
-            <div className="flex item-center"> {/* Left-Child-Div */}
-                <img className="h-70" src="https://asset.allen.in/dccd40f4-6c9d-4d84-8dc5-287391ec51a2/original.webp?__ar__=0.981595" alt="" />
+            <div className="">
+                <img className="h-85" src="https://asset.allen.in/dccd40f4-6c9d-4d84-8dc5-287391ec51a2/original.webp?__ar__=0.981595" alt="" />
             </div>
 
-            <div className="flex shadow-xl/30 w-3xl space-x-20  justify-center items-center"> {/* Right-Child-Div */}
+        <form onSubmit={handleSubmit}  className="shadow-xl w-2xl  rounded-2xl p-5">
 
-                   
+        <div className="mb-4">
+            <p className="font-semibold text-2xl">Request a callback</p>
+        </div>
 
-                   <div className="space-y-1.5"> {/* Left-Sub-Child-Div */}
-                    <h2>Student's full name*</h2>
-                    <input
-                     placeholder="      Ex:Rohit Singh"
-                     type="text"
-                     className="border-3 border-gray-300  rounded-lg w-xs  h-11 bg-white"
-                      />
-                    <h2>Class*</h2>
-                     <input
-                     placeholder="      12th+"
-                     type="text"
-                     className="border-3 border-gray-300 rounded-lg w-xs  h-11 bg-white"
-                      />
-                    <h2>Preferred Courses*</h2>
-                     <input
-                     placeholder="      Online Courses"
-                     type="text"
-                     className="border-3 border-gray-300 rounded-lg w-xs  h-11 bg-white" 
-                      />
-                   </div>
-
-                   <div className="space-y-1.5"> {/* Right-Sub-Child-Div */}
-                  <h2>Mobile Number*</h2>
-                    <input
-                     placeholder="      Ex:+9176257862"
-                     type="text"
-                     className="border-3 border-gray-300 rounded-lg w-xs  h-11 bg-white"
-                      />
-                    <h2>Goals*</h2>
-                     <input
-                     placeholder="      NEET"
-                     type="text"
-                     className=" border-3 border-gray-300 rounded-lg w-xs  h-11 bg-white"
-                      />
-                    <h2>Online Course*</h2>
-                     <input
-                     placeholder="      Andman And Nicobar Islands"
-                     type="text"
-                     className="border-3 border-gray-300 rounded-lg w-xs hover:border-black focus:border-black hover:placeholder-black h-11 bg-white"
-                      />
-                   </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8  ">
+        {CallBackCardData.map((c)=>(
+            <div key={c.name}  className="space-y-1.5">
+                <label className="block text-sm font-medium text-gray-700">{c.title}</label>
+                <input
+                name = {c.name}
+                value = {form[c.name]}
+                onChange={handleChanges}
+                placeholder={c.placeholder}
+                type="text"
                 
+                  className="border-2 border-gray-300 rounded-lg h-12 w-70 bg-white px-3
+                           hover:border-black focus:border-gray-300 focus:outline-none transition"        
+                />      
+            </div>
+        ))}
 
-            </div> {/* Right-Child-Div-End */}
+        </div>
 
-                   
-     
-     
+            <div className="flex justify-center items-center mt-4">
+                 <p className="font-extralight text-sm">By continuing, you agree to our </p>
+                 <p  className="font-light text-sm underline decoration-1">Terms & Conditions</p>
+            </div>
+
+        <div className="flex justify-center items-center">
+        <button 
+        type="submit"
+          className="mt-6 w-full md:w-50  px-5 h-11 rounded-3xl bg-blue-600 text-white font-semibold
+          cursor-grab active:cursor-grabbing hover:opacity-90 transition "
+        >    Submit
+        </button >
+        </div>
+
+        </form>
+            
        </section>
 
     )
