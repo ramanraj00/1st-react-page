@@ -12,9 +12,11 @@ import Advantage  from "./AdvantageComponent.jsx";
 import TestimonialCard from "./Testimonial.jsx";
 import CallBackCard from "./CallBack.jsx"
 import LinkCard from "./Link.jsx";
-import Footer from"./footer.jsx";
+import Footer from "./footer.jsx";
+
+
 export default function Layout() {
-  const { pathname } = useLocation();
+const { pathname } = useLocation();
 
   return (
     <>
@@ -44,6 +46,8 @@ export default function Layout() {
         {pathname === "/" && <LinkCard/>}
 
         {pathname === "/" && <Footer/>}
+
+       
         
         <Outlet />
       </main>
